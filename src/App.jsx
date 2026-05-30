@@ -24,6 +24,54 @@ export default function App() {
   const [imageLoaded, setImageLoaded] = useState(false);
 
   useEffect(() => {
+    const supportsPointer = window.matchMedia('(pointer: fine)').matches;
+    if (!supportsPointer) return undefined;
+
+    const trail = [];
+    let rafId = 0;
+
+    const ensureTrail = () => {
+      if (trail.length) return;
+      for (let i = 0; i < 8; i += 1) {
+        const dot = document.createElement('span');
+        dot.className = 'cursor-trail-dot';
+        dot.style.setProperty('--delay', `${i * 0.04}s`);
+        document.body.appendChild(dot);
+        trail.push(dot);
+      }
+    };
+
+    const updateTrail = (x, y) => {
+      ensureTrail();
+      cancelAnimationFrame(rafId);
+      rafId = requestAnimationFrame(() => {
+        trail.forEach((dot, index) => {
+          const scale = 1 - index * 0.08;
+          dot.style.transform = `translate(${x - 6}px, ${y - 6}px) scale(${Math.max(scale, 0.4)})`;
+          dot.style.opacity = String(Math.max(0.9 - index * 0.11, 0));
+        });
+      });
+    };
+
+    const handleMove = (event) => updateTrail(event.clientX, event.clientY);
+    const handleLeave = () => {
+      trail.forEach((dot) => {
+        dot.style.opacity = '0';
+      });
+    };
+
+    window.addEventListener('pointermove', handleMove, { passive: true });
+    window.addEventListener('pointerleave', handleLeave);
+
+    return () => {
+      window.removeEventListener('pointermove', handleMove);
+      window.removeEventListener('pointerleave', handleLeave);
+      cancelAnimationFrame(rafId);
+      trail.forEach((dot) => dot.remove());
+    };
+  }, []);
+
+  useEffect(() => {
     const loader = new Image();
     loader.src = profileImage;
     loader.onload = () => setImageLoaded(true);
@@ -89,6 +137,7 @@ export default function App() {
           <article className="card intro-card">
             <p className="section-label">Summary</p>
             <h2>Writing that carries voice, rhythm, and stage presence.</h2>
+            <p className="hero-note">I am a student in the school of life, with a great interest in writing.</p>
             <p>
               I write content that feels alive: promotional pieces, cultural narrations, original blogs,
               poetry sequences, and long-form fiction. My focus is clarity, emotion, and consistency.
@@ -97,12 +146,13 @@ export default function App() {
 
           <article className="card stats-card">
             <p className="section-label">Highlights</p>
-            <ul className="stats-list">
-              <li><strong>2+</strong><span>years writing experience</span></li>
-              <li><strong>18</strong><span>creative blogs on words</span></li>
-              <li><strong>21</strong><span>poems in one compilation</span></li>
-              <li><strong>130</strong><span>page novel project</span></li>
-            </ul>
+            <div className="stats-grid">
+              <div className="stat-item"><strong>2+</strong><span>years writing experience</span></div>
+              <div className="stat-item"><strong>18</strong><span>creative blogs on words</span></div>
+              <div className="stat-item"><strong>21</strong><span>poems in one compilation</span></div>
+              <div className="stat-item"><strong>130</strong><span>page novel project</span></div>
+              <div className="stat-item stat-item-wide"><strong>2</strong><span>stand up bits</span></div>
+            </div>
           </article>
         </section>
 

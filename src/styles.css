@@ -91,6 +91,7 @@ h3 { font-size: 1.5rem; }
 }
 
 .subtitle { font-size: 1.1rem; margin: 26px 0 18px; max-width: 56ch; line-height: 1.8; }
+.hero-note { max-width: 58ch; margin: 0 0 16px; font-size: 1rem; color: #3b3b3b; line-height: 1.8; }
 .summary { max-width: 60ch; font-size: 1rem; margin-bottom: 34px; line-height: 1.9; }
 
 .actions, .contact-links {
@@ -169,6 +170,21 @@ h3 { font-size: 1.5rem; }
 }
 .portrait-note { max-width: 28ch; text-align: center; color: var(--muted); }
 
+.cursor-trail-dot {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  background:
+    radial-gradient(circle at 35% 35%, rgba(255, 255, 255, 0.95) 0 16%, rgba(0, 0, 0, 0.85) 17% 100%);
+  box-shadow: 0 0 18px rgba(0, 0, 0, 0.12);
+  transition: transform 140ms ease-out, opacity 220ms ease-out;
+}
+
 @keyframes portrait-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
@@ -187,26 +203,41 @@ h3 { font-size: 1.5rem; }
   box-shadow: var(--shadow);
 }
 
-.stats-list {
-  list-style: none;
-  padding: 0;
-  margin: 18px 0 0;
+.stats-grid {
+  margin-top: 18px;
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 16px;
+  gap: 16px 18px;
 }
 
-.stats-list li {
+.stat-item {
   border-top: 1px solid var(--line);
-  padding-top: 14px;
+  padding-top: 16px;
+  min-height: 120px;
 }
 
-.stats-list strong {
+.stat-item-wide {
+  grid-column: 1 / -1;
+  min-height: auto;
+}
+
+.stat-item strong {
   display: block;
   font-family: Georgia, serif;
   font-size: 2rem;
   color: #111;
 }
+
+.stat-item span {
+  display: block;
+  margin-top: 8px;
+  line-height: 1.4;
+  color: var(--muted);
+}
+
+.intro-card h2 { margin-bottom: 14px; }
+.intro-card .hero-note { margin: 0 0 20px; }
+.intro-card p:last-child { margin-top: 0; }
 
 .projects-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
 .project-card { display: grid; gap: 10px; }
@@ -264,7 +295,7 @@ h3 { font-size: 1.5rem; }
 @media (max-width: 640px) {
   .page-shell { width: min(100% - 20px, 1160px); padding: 20px 0 40px; }
   .card { padding: 20px; border-radius: 22px; }
-  .stats-list { grid-template-columns: 1fr; }
+  .stats-grid { grid-template-columns: 1fr; }
   h1 { max-width: 12ch; }
   .genre-grid { grid-template-columns: 1fr; }
   .genre-grid-compact { grid-template-columns: 1fr; }
