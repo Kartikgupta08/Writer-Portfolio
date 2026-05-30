@@ -196,11 +196,42 @@ h3 { font-size: 1.5rem; }
   font-size: 0.95rem;
 }
 
+.genre-explore {
+  margin-top: 34px;
+}
+
+.genre-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.genre-tile {
+  display: grid;
+  gap: 12px;
+  min-height: 180px;
+}
+
+.genre-tile h3 {
+  font-size: 1.3rem;
+}
+
+.genre-tile a {
+  margin-top: auto;
+  width: fit-content;
+  padding: 10px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
 .skill-group + .skill-group { margin-top: 18px; padding-top: 18px; border-top: 1px solid var(--line); }
 .contact-card { display: grid; align-content: start; }
 
 @media (max-width: 900px) {
   .hero, .grid-2, .projects-grid { grid-template-columns: 1fr; }
+  .genre-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .hero { min-height: auto; padding-top: 12px; }
   .section-heading { align-items: start; flex-direction: column; }
 }
@@ -210,4 +241,5 @@ h3 { font-size: 1.5rem; }
   .card { padding: 20px; border-radius: 22px; }
   .stats-list { grid-template-columns: 1fr; }
   h1 { max-width: 12ch; }
+  .genre-grid { grid-template-columns: 1fr; }
 }

@@ -174,6 +174,45 @@ export default function App() {
             </div>
           </article>
         </section>
+
+        <section className="section genre-explore">
+          <div className="section-heading">
+            <p className="section-label">Explore Genres</p>
+            <h2>Browse my work by tone</h2>
+          </div>
+
+          <div className="genre-grid">
+            <article className="card genre-tile">
+              <p className="project-type">Romance</p>
+              <h3>Romance stories</h3>
+              <a href="https://medium.com/@kaartikgupta2/list/romance-9a2df8f4b96a" target="_blank" rel="noreferrer">Explore Work</a>
+            </article>
+
+            <article className="card genre-tile">
+              <p className="project-type">Comedy</p>
+              <h3>Funny writing</h3>
+              <a href="https://medium.com/@kaartikgupta2/list/funny-480509cec0ca" target="_blank" rel="noreferrer">Explore Work</a>
+            </article>
+
+            <article className="card genre-tile">
+              <p className="project-type">Rom-Com</p>
+              <h3>Romantic comedy</h3>
+              <a href="https://medium.com/@kaartikgupta2/list/romcom-5dba0c67c92c" target="_blank" rel="noreferrer">Explore Work</a>
+            </article>
+
+            <article className="card genre-tile">
+              <p className="project-type">Tragedy</p>
+              <h3>Emotional pieces</h3>
+              <a href="https://medium.com/@kaartikgupta2/list/rr-rotadu-ritesiykyk-f70202bfb841" target="_blank" rel="noreferrer">Explore Work</a>
+            </article>
+
+            <article className="card genre-tile">
+              <p className="project-type">Observational</p>
+              <h3>Timepass writing</h3>
+              <a href="https://medium.com/@kaartikgupta2/list/timepass-writing-6403d0b2a610" target="_blank" rel="noreferrer">Explore Work</a>
+            </article>
+          </div>
+        </section>
       </main>
     </div>
   );
