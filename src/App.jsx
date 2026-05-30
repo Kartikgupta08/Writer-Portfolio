@@ -9,15 +9,34 @@ const novelLink = 'https://medium.com/@kaartikgupta2/changing-the-metro-part-1-8
 const emailLink = 'https://mail.google.com/mail/?view=cm&fs=1&to=kaartikgupta2@gmail.com&su=Let%27s%20Connect%20Regarding%20Writing%20Opportunities&body=Hi%20Kartik,%0A%0AI%20came%20across%20your%20portfolio%20and%20would%20like%20to%20connect.%0A%0ABest,%0A';
 
 function IconMedium() {
-  return <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 6.5A2.5 2.5 0 0 0 1.5 9v6A2.5 2.5 0 0 0 4 17.5h16a2.5 2.5 0 0 0 2.5-2.5V9A2.5 2.5 0 0 0 20 6.5H4Zm2.2 3.1v4.8H4.8V9.6h1.4Zm5.5 0 2.1 3.1 2.1-3.1h1.4v4.8h-1.4v-2.9l-2.1 3.1-2.1-3.1v2.9H10V9.6h1.7Z"/></svg>;
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <rect x="2" y="2" width="20" height="20" rx="5" fill="#000" />
+      <text x="12.2" y="16.2" textAnchor="middle" fontSize="13.5" fontFamily="Georgia, serif" fill="#fff" fontWeight="700">Me</text>
+    </svg>
+  );
 }
 
 function IconLinkedIn() {
-  return <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M5.5 3.5A2.5 2.5 0 1 1 5.5 8a2.5 2.5 0 0 1 0-4.5ZM3.8 9h3.4v12H3.8V9Zm6.1 0h3.3v1.6h.1c.5-.9 1.8-1.9 3.8-1.9 4 0 4.7 2.6 4.7 6v6.3H18v-5.6c0-1.3 0-3-1.9-3-1.8 0-2.1 1.4-2.1 2.9v5.7H9.9V9Z"/></svg>;
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <rect x="2" y="2" width="20" height="20" rx="4" fill="#0A66C2" />
+      <circle cx="6.4" cy="6.4" r="1.4" fill="#fff" />
+      <path fill="#fff" d="M5.2 9h2.6v8H5.2V9Zm4.1 0h2.5v1.1h.1c.4-.8 1.3-1.3 2.4-1.3 2.5 0 3 1.6 3 3.7V17h-2.6v-4.1c0-1 0-2-1.3-2-1.2 0-1.4.9-1.4 1.9V17H9.3V9Z" />
+    </svg>
+  );
 }
 
 function IconMail() {
-  return <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 0 1.5 8v8A2.5 2.5 0 0 0 4 18.5h16a2.5 2.5 0 0 0 2.5-2.5V8A2.5 2.5 0 0 0 20 5.5H4Zm0 2h16c.16 0 .31.02.45.07L12 13.1 3.55 7.57c.14-.05.29-.07.45-.07Zm16 9H4c-.18 0-.35-.03-.5-.08l5.4-4 2.1 1.37 2.1-1.37 5.4 4c-.15.05-.32.08-.5.08Z"/></svg>;
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <rect x="3" y="3" width="5" height="18" rx="2.2" fill="#4285F4" />
+      <rect x="16" y="3" width="5" height="18" rx="2.2" fill="#34A853" />
+      <path fill="#EA4335" d="M3 5.8 12 12.7 21 5.8V3.9L12 10.8 3 3.9v1.9Z" />
+      <path fill="#EA4335" d="M3 5.8V4a1 1 0 0 1 1-1h16a1 1 0 0 1 1 1v1.8L12 12.7 3 5.8Z" />
+      <path fill="#FBBC05" d="M18.3 3H21a1 1 0 0 1 1 1v3.1l-3.7-2.8V4a1 1 0 0 0-.3-.7Z" />
+    </svg>
+  );
 }
 
 export default function App() {
@@ -98,7 +117,7 @@ export default function App() {
           </p>
 
           <div className="actions">
-            <a className="button button-dark" href={mediumProfile} target="_blank" rel="noreferrer">
+            <a className="button button-light" href={mediumProfile} target="_blank" rel="noreferrer">
               <span className="icon"><IconMedium /></span>
               Medium
             </a>
@@ -280,9 +299,9 @@ export default function App() {
               Reach out for writing roles, collaborations, narration work, content strategy, or portfolio review.
             </p>
             <div className="contact-links">
-              <a href={mediumProfile} target="_blank" rel="noreferrer">Medium</a>
-              <a href={linkedinProfile} target="_blank" rel="noreferrer">LinkedIn</a>
-              <a href={emailLink} target="_blank" rel="noreferrer">Email</a>
+              <a href={mediumProfile} target="_blank" rel="noreferrer"><span className="icon"><IconMedium /></span>Medium</a>
+              <a href={linkedinProfile} target="_blank" rel="noreferrer"><span className="icon"><IconLinkedIn /></span>LinkedIn</a>
+              <a href={emailLink} target="_blank" rel="noreferrer"><span className="icon"><IconMail /></span>Email</a>
             </div>
           </article>
         </section>

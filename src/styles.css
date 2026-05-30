@@ -123,11 +123,11 @@ h3 { font-size: 1.5rem; }
 }
 
 .button-dark { background: #111; color: #fff; border-color: #111; }
-.button-light { background: rgba(255, 255, 255, 0.9); color: #111; }
+.button-light { background: #fff; color: #111; }
 .button:hover, .contact-links a:hover, .project-card a:hover { transform: translateY(-2px); }
 
-.icon { width: 18px; height: 18px; display: inline-flex; }
-.icon svg { width: 100%; height: 100%; }
+.icon { width: 20px; height: 20px; display: inline-flex; }
+.icon svg { width: 100%; height: 100%; display: block; }
 
 .hero-portrait { display: grid; justify-items: center; gap: 16px; }
 .portrait-orbit-shell {
@@ -252,6 +252,8 @@ h3 { font-size: 1.5rem; }
   padding: 10px 14px;
   font-size: 0.95rem;
 }
+
+.contact-links a .icon { width: 18px; height: 18px; }
 
 .genre-explore {
   margin-top: 34px;
