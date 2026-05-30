@@ -66,17 +66,19 @@ export default function App() {
         </div>
 
         <div className="hero-portrait">
-          <div className="portrait-frame portrait-ring">
-            {!imageLoaded && (
-              <div className="portrait-fallback" aria-hidden="true">KG</div>
-            )}
-            <img
-              src={profileImage}
-              alt="Portrait of Kartik Gupta"
-              onLoad={() => setImageLoaded(true)}
-              onError={() => setImageLoaded(false)}
-              style={{ display: imageLoaded ? 'block' : 'none' }}
-            />
+          <div className="portrait-orbit-shell">
+            <div className="portrait-frame">
+              {!imageLoaded && (
+                <div className="portrait-fallback" aria-hidden="true">KG</div>
+              )}
+              <img
+                src={profileImage}
+                alt="Portrait of Kartik Gupta"
+                onLoad={() => setImageLoaded(true)}
+                onError={() => setImageLoaded(false)}
+                style={{ display: imageLoaded ? 'block' : 'none' }}
+              />
+            </div>
           </div>
           <div className="portrait-note">Clean, direct storytelling with a literary edge.</div>
         </div>
