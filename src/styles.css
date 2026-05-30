@@ -72,14 +72,14 @@ h3 { font-size: 1.5rem; }
 }
 .name-underline {
   width: min(220px, 52vw);
-  height: 1px;
-  background: linear-gradient(90deg, #111 0%, rgba(17, 17, 17, 0.15) 100%);
+  height: 2px;
+  background: linear-gradient(90deg, #0a0a0a 0%, rgba(10, 10, 10, 0.35) 100%);
 }
 .pen-mark {
   width: 18px;
   height: 18px;
-  color: #111;
-  opacity: 0.72;
+  color: #0a0a0a;
+  opacity: 0.9;
   transform: rotate(-8deg);
   flex: 0 0 auto;
 }
@@ -88,6 +88,11 @@ h3 { font-size: 1.5rem; }
 .subtitle, .summary, .card p, .project-meta {
   color: var(--muted);
   line-height: 1.7;
+}
+
+.subtitle strong, .subtitle em {
+  font-style: italic;
+  font-weight: 700;
 }
 
 .subtitle { font-size: 1.1rem; margin: 26px 0 18px; max-width: 56ch; line-height: 1.8; }
@@ -169,6 +174,7 @@ h3 { font-size: 1.5rem; }
   background: radial-gradient(circle at 30% 20%, #fff, #dcdcdc 65%, #c9c9c9 100%);
 }
 .portrait-note { max-width: 28ch; text-align: center; color: var(--muted); }
+.portrait-note strong, .portrait-note em { font-style: italic; font-weight: 700; }
 
 .cursor-trail-dot {
   position: fixed;

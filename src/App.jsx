@@ -91,7 +91,7 @@ export default function App() {
               </span>
             </div>
           </div>
-          <p className="subtitle">Creative Content Writer, storyteller, narrator, and script-minded wordsmith.</p>
+          <p className="subtitle"><strong><em>Creative Content Writer, storyteller, narrator, and script-minded wordsmith.</em></strong></p>
           <p className="summary">
             Creative Content Writer with 2 years of experience crafting promotional content, stage narrations,
             and original adaptations for cultural events. I build emotional connection through language.
@@ -128,7 +128,7 @@ export default function App() {
               />
             </div>
           </div>
-          <div className="portrait-note">Clean, direct storytelling with a literary edge.</div>
+          <div className="portrait-note"><strong><em>Clean, direct storytelling with a literary edge.</em></strong></div>
         </div>
       </header>
 
