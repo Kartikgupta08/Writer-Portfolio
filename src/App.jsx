@@ -66,7 +66,7 @@ export default function App() {
         </div>
 
         <div className="hero-portrait">
-          <div className="portrait-frame">
+          <div className="portrait-frame portrait-ring">
             {!imageLoaded && (
               <div className="portrait-fallback" aria-hidden="true">KG</div>
             )}
@@ -140,41 +140,6 @@ export default function App() {
           </div>
         </section>
 
-        <section className="section grid-2">
-          <article className="card skills-card">
-            <p className="section-label">Skills</p>
-            <div className="skill-group">
-              <h3>Soft Skills</h3>
-              <p>Excellent Speaker, Skilled Orator</p>
-            </div>
-            <div className="skill-group">
-              <h3>Languages</h3>
-              <p>Hindi, English, Hinglish</p>
-            </div>
-            <div className="skill-group">
-              <h3>Expertise</h3>
-              <p>Script Writing, Storytelling, Character Development, Public Speaking</p>
-            </div>
-            <div className="skill-group">
-              <h3>Technical Skills</h3>
-              <p>Frontend, HTML, CSS, Bootstrap, Tailwind CSS, React, JavaScript, ML</p>
-            </div>
-          </article>
-
-          <article className="card contact-card">
-            <p className="section-label">Contact</p>
-            <h2>Let the words do the talking.</h2>
-            <p>
-              Reach out for writing roles, collaborations, narration work, content strategy, or portfolio review.
-            </p>
-            <div className="contact-links">
-              <a href={mediumProfile} target="_blank" rel="noreferrer">Medium</a>
-              <a href={linkedinProfile} target="_blank" rel="noreferrer">LinkedIn</a>
-              <a href={emailLink} target="_blank" rel="noreferrer">Email</a>
-            </div>
-          </article>
-        </section>
-
         <section className="section genre-explore">
           <div className="section-heading">
             <p className="section-label">Explore Genres</p>
@@ -212,6 +177,62 @@ export default function App() {
               <a href="https://medium.com/@kaartikgupta2/list/timepass-writing-6403d0b2a610" target="_blank" rel="noreferrer">Explore Work</a>
             </article>
           </div>
+        </section>
+
+        <section className="section genre-explore">
+          <div className="section-heading">
+            <p className="section-label">Light Reads</p>
+            <h2>Stories that smile back</h2>
+          </div>
+
+          <div className="genre-grid genre-grid-compact">
+            <article className="card genre-tile">
+              <p className="project-type">Funny Poetry</p>
+              <h3>Fake poetries</h3>
+              <a href="https://medium.com/@kaartikgupta2/list/fake-poetries-fa97c0bf36a3" target="_blank" rel="noreferrer">Let's laugh</a>
+            </article>
+
+            <article className="card genre-tile">
+              <p className="project-type">Sit-Com Story</p>
+              <h3>Neighbours</h3>
+              <a href="https://medium.com/@kaartikgupta2/list/neighbours-7a19c2e2703b" target="_blank" rel="noreferrer">Explore Work</a>
+            </article>
+          </div>
+        </section>
+
+        <section className="section grid-2">
+          <article className="card skills-card">
+            <p className="section-label">Skills</p>
+            <div className="skill-group">
+              <h3>Soft Skills</h3>
+              <p>Excellent Speaker, Skilled Orator</p>
+            </div>
+            <div className="skill-group">
+              <h3>Languages</h3>
+              <p>Hindi, English, Hinglish</p>
+            </div>
+            <div className="skill-group">
+              <h3>Expertise</h3>
+              <p>Script Writing, Storytelling, Character Development, Public Speaking</p>
+            </div>
+            <div className="skill-group">
+              <h3>Technical Skills</h3>
+              <p>Frontend, HTML, CSS, Bootstrap, Tailwind CSS, React, JavaScript, ML</p>
+            </div>
+          </article>
+
+          <article className="card contact-card">
+            <p className="section-label">Contact</p>
+            <h2>Let the words do the talking.</h2>
+            <p>
+              Reach out for writing roles, collaborations, narration work, content strategy, or portfolio review.
+            </p>
+            <div className="contact-links">
+              <a href={mediumProfile} target="_blank" rel="noreferrer">Medium</a>
+              <a href={linkedinProfile} target="_blank" rel="noreferrer">LinkedIn</a>
+              <a href={emailLink} target="_blank" rel="noreferrer">Email</a>
+            </div>
+          </article>
         </section>
       </main>
     </div>

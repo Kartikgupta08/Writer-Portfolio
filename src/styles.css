@@ -135,6 +135,19 @@ h3 { font-size: 1.5rem; }
   position: relative;
 }
 
+.portrait-ring::before {
+  content: "";
+  position: absolute;
+  inset: -10px;
+  border-radius: 50%;
+  border: 2px solid rgba(0, 0, 0, 0.85);
+  border-top-color: transparent;
+  border-right-color: transparent;
+  animation: portrait-spin 8s linear infinite;
+  pointer-events: none;
+  z-index: 2;
+}
+
 .portrait-frame img, .portrait-fallback {
   position: absolute;
   inset: 0;
@@ -153,6 +166,11 @@ h3 { font-size: 1.5rem; }
   background: radial-gradient(circle at 30% 20%, #fff, #dcdcdc 65%, #c9c9c9 100%);
 }
 .portrait-note { max-width: 28ch; text-align: center; color: var(--muted); }
+
+@keyframes portrait-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
 
 .section { margin-top: 34px; }
 .grid-2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
@@ -206,6 +224,10 @@ h3 { font-size: 1.5rem; }
   gap: 18px;
 }
 
+.genre-grid-compact {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
 .genre-tile {
   display: grid;
   gap: 12px;
@@ -232,6 +254,7 @@ h3 { font-size: 1.5rem; }
 @media (max-width: 900px) {
   .hero, .grid-2, .projects-grid { grid-template-columns: 1fr; }
   .genre-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .genre-grid-compact { grid-template-columns: 1fr; }
   .hero { min-height: auto; padding-top: 12px; }
   .section-heading { align-items: start; flex-direction: column; }
 }
@@ -242,4 +265,5 @@ h3 { font-size: 1.5rem; }
   .stats-list { grid-template-columns: 1fr; }
   h1 { max-width: 12ch; }
   .genre-grid { grid-template-columns: 1fr; }
+  .genre-grid-compact { grid-template-columns: 1fr; }
 }
