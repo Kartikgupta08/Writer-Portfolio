@@ -396,6 +396,10 @@ export default function App() {
           </svg>
         </button>
       )}
+
+      <footer className="site-footer">
+        Designed &amp; Built by Kartik Gupta
+      </footer>
     </div>
   );
 }
