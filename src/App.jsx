@@ -168,7 +168,7 @@ export default function App() {
         <section className="section grid-2" id="experience">
           <article className="card intro-card">
             <p className="section-label">Summary</p>
-            <h2>Writing that carries voice, rhythm, and stage presence.</h2>
+            <h2 className="italic-heading">Writing that carries voice, rhythm, and stage presence.</h2>
             <p>
               I write content that feels alive: promotional pieces, cultural narrations, original blogs,
               poetry sequences, and long-form fiction. My focus is clarity, emotion, and consistency.
@@ -190,7 +190,7 @@ export default function App() {
         <section className="section" id="projects">
           <div className="section-heading">
             <p className="section-label">Projects</p>
-            <h2>Selected writing work</h2>
+            <h2 className="italic-heading">Selected writing work</h2>
           </div>
 
           <div className="projects-grid">
@@ -223,7 +223,7 @@ export default function App() {
         <section className="section genre-explore">
           <div className="section-heading">
             <p className="section-label">Explore Genres</p>
-            <h2>Browse my work by tone</h2>
+            <h2 className="italic-heading">Browse my work by tone</h2>
           </div>
 
           <div className="genre-grid">
@@ -262,7 +262,7 @@ export default function App() {
         <section className="section genre-explore">
           <div className="section-heading">
             <p className="section-label">Light Reads</p>
-            <h2>Stories that smile back</h2>
+            <h2 className="italic-heading">Stories that smile back</h2>
           </div>
 
           <div className="genre-grid genre-grid-compact">

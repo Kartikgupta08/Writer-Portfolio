@@ -127,6 +127,11 @@ a { color: inherit; }
   font-style: italic;
 }
 
+.italic-heading {
+  font-weight: 700;
+  font-style: italic;
+}
+
 .skills-label {
   font-weight: 700;
   font-style: italic;
