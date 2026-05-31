@@ -227,7 +227,7 @@ export default function App() {
           </div>
 
           <div className="genre-grid">
-            <article className="card genre-tile">
+            <article className="card genre-tile romance-card">
               <p className="project-type romance-label">
                 <span className="heart-beat heart-inline" aria-hidden="true">
                   <svg viewBox="0 0 24 24" fill="currentColor">
