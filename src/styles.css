@@ -64,11 +64,31 @@ a { color: inherit; }
 }
 
 .topnav a {
+  position: relative;
+  padding-bottom: 8px;
   color: rgba(255, 255, 255, 0.88);
   text-decoration: none;
   font-size: 0.95rem;
   font-weight: 700;
   letter-spacing: 0.08em;
+}
+
+.topnav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: #12a8e0;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 180ms ease;
+}
+
+.topnav a:hover::after,
+.topnav a:focus-visible::after {
+  transform: scaleX(1);
 }
 
 .resume-button {
@@ -160,7 +180,7 @@ h3 { font-size: 1.5rem; }
   gap: 10px;
   text-decoration: none;
   border-radius: 999px;
-  border: 1px solid var(--line);
+  border: 1px solid #000;
   transition: transform 160ms ease, background 160ms ease, border-color 160ms ease;
 }
 
@@ -171,7 +191,7 @@ h3 { font-size: 1.5rem; }
 }
 
 .button-dark { background: #111; color: #fff; border-color: #111; }
-.button-light { background: #fff; color: #111; }
+.button-light { background: #fff; color: #111; border-color: #000; }
 .button:hover, .contact-links a:hover, .project-card a:hover { transform: translateY(-2px); }
 
 .icon { width: 20px; height: 20px; display: inline-flex; }
