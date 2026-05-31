@@ -2,6 +2,9 @@ import { useEffect, useState } from 'react';
 import profileImage from '../assets/profile.png';
 import neighboursImage from '../assets/Neighbours.png';
 import fakePoetryImage from '../assets/fakepoetry.png';
+import wordImage from '../assets/word.png';
+import twentyOneDaysImage from '../assets/21days.png';
+import metroImage from '../assets/metro.png';
 
 const mediumProfile = 'https://medium.com/@kaartikgupta2';
 const linkedinProfile = 'https://www.linkedin.com/in/kartik-gupta08/';
@@ -248,6 +251,12 @@ export default function App() {
             <article className="card project-card">
               <p className="project-type">Blog Collection</p>
               <h3>Blogs on words</h3>
+              <img
+                className="project-cover-image"
+                src={wordImage}
+                alt="Cover image for Blogs on words collection"
+                loading="lazy"
+              />
               <p>Collection of around 18 creative blogs on words like Shahar, Naam, Aaj, along with short stories titled Aap and Weird.</p>
               <p>Also includes creative blogs on numbers like 2 and emotions like realization.</p>
               <a href={blogLink} target="_blank" rel="noreferrer">Read on Medium</a>
@@ -256,6 +265,12 @@ export default function App() {
             <article className="card project-card">
               <p className="project-type">Poetry Compilation</p>
               <h3>Mere pyaar ke hamare 21 din</h3>
+              <img
+                className="project-cover-image"
+                src={twentyOneDaysImage}
+                alt="Cover image for Mere pyaar ke hamare 21 din poetry compilation"
+                loading="lazy"
+              />
               <p>A 21-poem collection capturing day-to-day life, new beginnings, attraction, and evolving feelings between two people.</p>
               <p>Built as a storytelling sequence through poems from day 1 to day 21.</p>
               <a href={poetryLink} target="_blank" rel="noreferrer">Read on Medium</a>
@@ -264,6 +279,12 @@ export default function App() {
             <article className="card project-card">
               <p className="project-type">Novel</p>
               <h3>Changing the metro</h3>
+              <img
+                className="project-cover-image"
+                src={metroImage}
+                alt="Cover image for Changing the metro novel"
+                loading="lazy"
+              />
               <p>A relatable 130-page novel blending love, humor, heartbreak, corporate life, middle-class lifestyle, and metro-city speed.</p>
               <p>Built around friendship, emotion, and a fast-moving urban backdrop.</p>
               <a href={novelLink} target="_blank" rel="noreferrer">Read on Medium</a>

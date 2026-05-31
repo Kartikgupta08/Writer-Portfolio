@@ -628,6 +628,16 @@ h3 { font-size: 1.5rem; }
   font-size: 0.95rem;
 }
 
+.project-cover-image {
+  width: 100%;
+  height: clamp(150px, 18vw, 210px);
+  object-fit: cover;
+  object-position: center;
+  border-radius: 14px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  margin: 2px 0 4px;
+}
+
 .contact-links a .icon { width: 18px; height: 18px; }
 
 .genre-explore {
