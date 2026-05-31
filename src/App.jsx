@@ -310,7 +310,7 @@ export default function App() {
         <section className="section genre-explore">
           <div className="section-heading">
             <p className="section-label">Light Reads</p>
-            <h2 className="italic-heading">Stories that smile back</h2>
+            <h2 className="italic-heading">Work that will make you smile</h2>
           </div>
 
           <div className="genre-grid genre-grid-compact">
