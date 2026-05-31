@@ -97,12 +97,13 @@ a { color: inherit; }
   justify-content: center;
   min-width: 132px;
   padding: 12px 18px;
-  border-radius: 18px 2px 18px 2px;
+  border-radius: 2px;
   background: #12a8e0;
   color: #fff;
   text-decoration: none;
   font-weight: 700;
   letter-spacing: 0.08em;
+  border: 1px solid #12a8e0;
 }
 
 .hero {
@@ -174,7 +175,7 @@ h3 { font-size: 1.5rem; }
   margin-top: 0;
 }
 
-.button, .contact-links a, .project-card a {
+.button, .resume-button, .contact-links a, .project-card a, .genre-tile a {
   display: inline-flex;
   align-items: center;
   gap: 10px;
@@ -190,9 +191,35 @@ h3 { font-size: 1.5rem; }
   box-shadow: var(--shadow);
 }
 
-.button-dark { background: #111; color: #fff; border-color: #111; }
-.button-light { background: #fff; color: #111; border-color: #000; }
-.button:hover, .contact-links a:hover, .project-card a:hover { transform: translateY(-2px); }
+.button-dark,
+.button-light,
+.resume-button,
+.contact-links a,
+.project-card a,
+.genre-tile a {
+  background: #fff;
+  color: #111;
+  border-color: #000;
+}
+
+.button:hover, .resume-button:hover, .contact-links a:hover, .project-card a:hover, .genre-tile a:hover { transform: translateY(-2px); }
+
+.button-dark:hover,
+.button-light:hover,
+.resume-button:hover,
+.contact-links a:hover,
+.project-card a:hover,
+.genre-tile a:hover {
+  background: #111;
+  color: #fff;
+  border-color: #111;
+}
+
+.resume-button:hover {
+  background: #12a8e0;
+  color: #fff;
+  border-color: #12a8e0;
+}
 
 .icon { width: 20px; height: 20px; display: inline-flex; }
 .icon svg { width: 100%; height: 100%; display: block; }
@@ -351,9 +378,6 @@ h3 { font-size: 1.5rem; }
   margin-top: auto;
   width: fit-content;
   padding: 10px 14px;
-  border-radius: 999px;
-  border: 1px solid var(--line);
-  text-decoration: none;
   font-size: 0.95rem;
 }
 
