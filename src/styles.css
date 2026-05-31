@@ -33,8 +33,56 @@ a { color: inherit; }
 .page-shell {
   width: min(1160px, calc(100% - 32px));
   margin: 0 auto;
-  padding: 32px 0 56px;
+  padding: 0 0 56px;
   position: relative;
+}
+
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  margin: 16px auto 28px;
+  background: #111;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  width: min(100%, 1440px);
+  border-radius: 0 0 22px 22px;
+  overflow: hidden;
+}
+
+.topbar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 18px 24px;
+}
+
+.topnav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 28px;
+}
+
+.topnav a {
+  color: rgba(255, 255, 255, 0.88);
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.resume-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 132px;
+  padding: 12px 18px;
+  border-radius: 18px 2px 18px 2px;
+  background: #12a8e0;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 0.08em;
 }
 
 .hero {
@@ -42,7 +90,7 @@ a { color: inherit; }
   grid-template-columns: minmax(0, 1.25fr) minmax(280px, 0.75fr);
   gap: 36px;
   align-items: center;
-  min-height: 92vh;
+  min-height: 88vh;
 }
 
 .eyebrow, .section-label, .project-type {
@@ -293,6 +341,7 @@ h3 { font-size: 1.5rem; }
 .contact-card { display: grid; align-content: start; }
 
 @media (max-width: 900px) {
+  .topbar-inner { padding: 16px 18px; }
   .hero, .grid-2, .projects-grid { grid-template-columns: 1fr; }
   .genre-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .genre-grid-compact { grid-template-columns: 1fr; }
@@ -302,6 +351,8 @@ h3 { font-size: 1.5rem; }
 
 @media (max-width: 640px) {
   .page-shell { width: min(100% - 20px, 1160px); padding: 20px 0 40px; }
+  .topbar-inner { flex-direction: column; align-items: flex-start; }
+  .topnav { gap: 18px; }
   .card { padding: 20px; border-radius: 22px; }
   .stats-grid { grid-template-columns: 1fr; }
   h1 { max-width: 12ch; }

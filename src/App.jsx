@@ -99,7 +99,20 @@ export default function App() {
 
   return (
     <div className="page-shell">
-      <header className="hero">
+      <header className="topbar">
+        <div className="topbar-inner">
+          <nav className="topnav" aria-label="Primary">
+            <a href="#about">ABOUT</a>
+            <a href="#skills">SKILLS</a>
+            <a href="#projects">PROJECTS</a>
+            <a href="#experience">EXPERIENCE</a>
+            <a href="#contact">CONTACT</a>
+          </nav>
+          <a className="resume-button" href="/Writer_resume.pdf" target="_blank" rel="noreferrer">RESUME</a>
+        </div>
+      </header>
+
+      <header className="hero" id="about">
         <div className="hero-copy">
           <div className="name-lockup">
             <h1>Kartik Gupta</h1>
@@ -152,11 +165,10 @@ export default function App() {
       </header>
 
       <main>
-        <section className="section grid-2">
+        <section className="section grid-2" id="experience">
           <article className="card intro-card">
             <p className="section-label">Summary</p>
             <h2>Writing that carries voice, rhythm, and stage presence.</h2>
-            <p className="hero-note">I am a student in the school of life, with a great interest in writing.</p>
             <p>
               I write content that feels alive: promotional pieces, cultural narrations, original blogs,
               poetry sequences, and long-form fiction. My focus is clarity, emotion, and consistency.
@@ -175,7 +187,7 @@ export default function App() {
           </article>
         </section>
 
-        <section className="section">
+        <section className="section" id="projects">
           <div className="section-heading">
             <p className="section-label">Projects</p>
             <h2>Selected writing work</h2>
@@ -271,8 +283,8 @@ export default function App() {
           </div>
         </section>
 
-        <section className="section grid-2">
-          <article className="card skills-card">
+        <section className="section grid-2" id="contact">
+          <article className="card skills-card" id="skills">
             <p className="section-label">Skills</p>
             <div className="skill-group">
               <h3>Soft Skills</h3>
