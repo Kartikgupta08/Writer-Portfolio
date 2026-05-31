@@ -44,9 +44,20 @@ function IconMail() {
 export default function App() {
   const [imageLoaded, setImageLoaded] = useState(false);
   const [showBackToTop, setShowBackToTop] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(() => {
+    if (typeof window === 'undefined') return false;
+    const savedTheme = window.localStorage.getItem('theme');
+    if (savedTheme === 'dark') return true;
+    if (savedTheme === 'light') return false;
+    return window.matchMedia('(prefers-color-scheme: dark)').matches;
+  });
 
   const handleBackToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const handleThemeToggle = () => {
+    setIsDarkMode((prev) => !prev);
   };
 
   useEffect(() => {
@@ -126,6 +137,12 @@ export default function App() {
     };
   }, []);
 
+  useEffect(() => {
+    const themeValue = isDarkMode ? 'dark' : 'light';
+    document.documentElement.setAttribute('data-theme', themeValue);
+    window.localStorage.setItem('theme', themeValue);
+  }, [isDarkMode]);
+
   return (
     <div className="page-shell">
       <header className="topbar">
@@ -137,7 +154,12 @@ export default function App() {
             <a href="#experience">EXPERIENCE</a>
             <a href="#contact">CONTACT</a>
           </nav>
-          <a className="resume-button" href="/Writer_resume.pdf" target="_blank" rel="noreferrer">RESUME</a>
+          <div className="top-actions">
+            <button className="mode-button" type="button" onClick={handleThemeToggle}>
+              {isDarkMode ? 'DAY MODE' : 'NIGHT MODE'}
+            </button>
+            <a className="resume-button" href="/Writer_resume.pdf" target="_blank" rel="noreferrer">RESUME</a>
+          </div>
         </div>
       </header>
 
