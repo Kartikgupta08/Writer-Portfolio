@@ -398,7 +398,7 @@ export default function App() {
       )}
 
       <footer className="site-footer">
-        Designed &amp; Built by Kartik Gupta
+        Designed &amp; Built by <span className="footer-name">Kartik Gupta</span>
       </footer>
     </div>
   );
