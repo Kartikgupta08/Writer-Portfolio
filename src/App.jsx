@@ -41,6 +41,11 @@ function IconMail() {
 
 export default function App() {
   const [imageLoaded, setImageLoaded] = useState(false);
+  const [showBackToTop, setShowBackToTop] = useState(false);
+
+  const handleBackToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
   useEffect(() => {
     const supportsPointer = window.matchMedia('(pointer: fine)').matches;
@@ -95,6 +100,28 @@ export default function App() {
     loader.src = profileImage;
     loader.onload = () => setImageLoaded(true);
     loader.onerror = () => setImageLoaded(false);
+  }, []);
+
+  useEffect(() => {
+    const updateBackToTopVisibility = () => {
+      const summarySection = document.getElementById('experience');
+      if (!summarySection) {
+        setShowBackToTop(window.scrollY > 300);
+        return;
+      }
+
+      const sectionBottom = summarySection.offsetTop + summarySection.offsetHeight;
+      setShowBackToTop(window.scrollY > sectionBottom);
+    };
+
+    updateBackToTopVisibility();
+    window.addEventListener('scroll', updateBackToTopVisibility, { passive: true });
+    window.addEventListener('resize', updateBackToTopVisibility);
+
+    return () => {
+      window.removeEventListener('scroll', updateBackToTopVisibility);
+      window.removeEventListener('resize', updateBackToTopVisibility);
+    };
   }, []);
 
   return (
@@ -334,6 +361,15 @@ export default function App() {
           </article>
         </section>
       </main>
+
+      {showBackToTop && (
+        <button className="back-to-top" type="button" onClick={handleBackToTop} aria-label="Back to top">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 19V5" />
+            <path d="M6 11 12 5l6 6" />
+          </svg>
+        </button>
+      )}
     </div>
   );
 }

@@ -531,6 +531,16 @@ h3 { font-size: 1.5rem; }
 
 .projects-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
 .project-card { display: grid; gap: 10px; }
+
+.projects-grid .project-card {
+  transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
+}
+
+.projects-grid .project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.14);
+  border-color: rgba(0, 0, 0, 0.26);
+}
 .project-card a, .contact-links a {
   width: fit-content;
   padding: 10px 14px;
@@ -557,6 +567,15 @@ h3 { font-size: 1.5rem; }
   display: grid;
   gap: 12px;
   min-height: 180px;
+}
+
+.genre-grid .genre-tile {
+  transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
+}
+
+.genre-grid .genre-tile:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.14);
 }
 
 .romance-card {
@@ -642,6 +661,46 @@ h3 { font-size: 1.5rem; }
   font-style: italic;
 }
 
+.back-to-top {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: 2px solid #12a8e0;
+  background: rgba(7, 12, 20, 0.9);
+  color: #12a8e0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.25);
+  transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
+  z-index: 60;
+}
+
+.back-to-top svg {
+  width: 28px;
+  height: 28px;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+}
+
+.back-to-top:hover {
+  transform: translateY(-3px);
+  background: rgba(7, 12, 20, 1);
+  box-shadow: 0 18px 36px rgba(0, 0, 0, 0.32);
+}
+
+.back-to-top:focus-visible {
+  outline: 3px solid rgba(18, 168, 224, 0.35);
+  outline-offset: 3px;
+}
+
 @media (max-width: 900px) {
   .topbar-inner { padding: 16px 18px; }
   .hero, .grid-2, .projects-grid { grid-template-columns: 1fr; }
@@ -660,4 +719,11 @@ h3 { font-size: 1.5rem; }
   h1 { max-width: 12ch; }
   .genre-grid { grid-template-columns: 1fr; }
   .genre-grid-compact { grid-template-columns: 1fr; }
+  .back-to-top {
+    right: 16px;
+    bottom: 16px;
+    width: 56px;
+    height: 56px;
+  }
+  .back-to-top svg { width: 24px; height: 24px; }
 }
