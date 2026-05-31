@@ -241,25 +241,37 @@ export default function App() {
             </article>
 
             <article className="card genre-tile">
-              <p className="project-type">Comedy</p>
+              <p className="project-type comedy-label">
+                <span className="laugh-emoji" aria-hidden="true">😂</span>
+                Comedy
+              </p>
               <h3>Funny writing</h3>
               <a href="https://medium.com/@kaartikgupta2/list/funny-480509cec0ca" target="_blank" rel="noreferrer">Explore Work</a>
             </article>
 
             <article className="card genre-tile">
-              <p className="project-type">Rom-Com</p>
+              <p className="project-type romcom-label">
+                <span className="romcom-emoji" aria-hidden="true">🎬</span>
+                Rom-Com
+              </p>
               <h3>Romantic comedy</h3>
               <a href="https://medium.com/@kaartikgupta2/list/romcom-5dba0c67c92c" target="_blank" rel="noreferrer">Explore Work</a>
             </article>
 
             <article className="card genre-tile">
-              <p className="project-type">Tragedy</p>
+              <p className="project-type tragedy-label">
+                <span className="tragedy-emoji" aria-hidden="true">💔</span>
+                Tragedy
+              </p>
               <h3>Emotional pieces</h3>
               <a href="https://medium.com/@kaartikgupta2/list/rr-rotadu-ritesiykyk-f70202bfb841" target="_blank" rel="noreferrer">Explore Work</a>
             </article>
 
             <article className="card genre-tile">
-              <p className="project-type">Observational</p>
+              <p className="project-type observational-label">
+                <span className="observational-emoji" aria-hidden="true">👀</span>
+                Observational
+              </p>
               <h3>Timepass writing</h3>
               <a href="https://medium.com/@kaartikgupta2/list/timepass-writing-6403d0b2a610" target="_blank" rel="noreferrer">Explore Work</a>
             </article>

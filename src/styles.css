@@ -150,23 +150,38 @@ h3 { font-size: 1.5rem; }
 
 .name-lockup { display: inline-flex; flex-direction: column; align-items: flex-start; }
 .name-mark {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+  --name-line-width: min(300px, 72vw);
+  --pen-size: 18px;
+  --pen-tip-offset: 8px;
+  position: relative;
+  width: calc(var(--name-line-width) + var(--pen-size) + var(--pen-tip-offset));
+  height: var(--pen-size);
   margin-top: 10px;
 }
+
 .name-underline {
-  width: min(220px, 52vw);
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: var(--name-line-width);
   height: 2px;
   background: linear-gradient(90deg, #0a0a0a 0%, rgba(10, 10, 10, 0.35) 100%);
+  transform: translateY(-50%) scaleX(0);
+  transform-origin: left;
+  animation: draw-name-line 1.4s ease-out 0.12s forwards;
 }
+
 .pen-mark {
+  position: absolute;
+  left: 0;
+  top: 50%;
   width: 18px;
   height: 18px;
   color: #0a0a0a;
   opacity: 0.9;
-  transform: rotate(-8deg);
-  flex: 0 0 auto;
+  transform: translateY(-50%) rotate(-8deg);
+  transform-origin: center;
+  animation: move-pen 1.4s ease-out 0.12s forwards;
 }
 .pen-mark svg { width: 100%; height: 100%; display: block; }
 
@@ -193,9 +208,65 @@ h3 { font-size: 1.5rem; }
   gap: 6px;
 }
 
+.comedy-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.romcom-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.tragedy-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.observational-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.laugh-emoji {
+  display: inline-block;
+  font-size: 1.08rem;
+  line-height: 1;
+  transform-origin: center;
+  animation: laugh-bounce 0.9s ease-in-out infinite;
+}
+
+.romcom-emoji {
+  display: inline-block;
+  font-size: 1.08rem;
+  line-height: 1;
+  transform-origin: center;
+  animation: romcom-pop 1.2s ease-in-out infinite;
+}
+
+.tragedy-emoji {
+  display: inline-block;
+  font-size: 1.08rem;
+  line-height: 1;
+  transform-origin: center;
+  animation: tragedy-sway 1.6s ease-in-out infinite;
+}
+
+.observational-emoji {
+  display: inline-block;
+  font-size: 1.08rem;
+  line-height: 1;
+  transform-origin: center;
+  animation: observational-look 1.4s ease-in-out infinite;
+}
+
 .heart-inline {
-  width: 14px;
-  height: 14px;
+  width: 18px;
+  height: 18px;
 }
 
 .subtitle, .summary, .card p, .project-meta {
@@ -334,12 +405,79 @@ h3 { font-size: 1.5rem; }
   to { transform: rotate(360deg); }
 }
 
+@keyframes draw-name-line {
+  from { transform: translateY(-50%) scaleX(0); }
+  to { transform: translateY(-50%) scaleX(1); }
+}
+
+@keyframes move-pen {
+  from {
+    left: 0;
+    transform: translateY(-50%) rotate(-8deg);
+  }
+  to {
+    left: calc(var(--name-line-width) - var(--pen-size) + var(--pen-tip-offset));
+    transform: translateY(-50%) rotate(-8deg);
+  }
+}
+
 @keyframes heart-beat {
   0%, 100% { transform: scale(1); }
   20% { transform: scale(1.2); }
   40% { transform: scale(1.05); }
   60% { transform: scale(1.25); }
   80% { transform: scale(1); }
+}
+
+@keyframes laugh-bounce {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  20% { transform: translateY(-1px) rotate(-8deg); }
+  40% { transform: translateY(0) rotate(8deg); }
+  60% { transform: translateY(-1px) rotate(-6deg); }
+  80% { transform: translateY(0) rotate(6deg); }
+}
+
+@keyframes romcom-pop {
+  0%, 100% { transform: scale(1) rotate(0deg); }
+  25% { transform: scale(1.12) rotate(-8deg); }
+  50% { transform: scale(1) rotate(8deg); }
+  75% { transform: scale(1.08) rotate(-4deg); }
+}
+
+@keyframes tragedy-sway {
+  0%, 100% { transform: translateY(0) rotate(0deg); opacity: 0.9; }
+  25% { transform: translateY(1px) rotate(-6deg); opacity: 0.75; }
+  50% { transform: translateY(0) rotate(6deg); opacity: 0.95; }
+  75% { transform: translateY(1px) rotate(-4deg); opacity: 0.8; }
+}
+
+@keyframes observational-look {
+  0%, 100% { transform: translateX(0) scale(1); }
+  20% { transform: translateX(-1px) scale(1.05); }
+  40% { transform: translateX(1px) scale(1.05); }
+  60% { transform: translateX(-1px) scale(1.05); }
+  80% { transform: translateX(1px) scale(1.05); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .name-underline {
+    animation: none;
+    transform: translateY(-50%) scaleX(1);
+  }
+
+  .pen-mark {
+    animation: none;
+    left: calc(var(--name-line-width) - var(--pen-size) + var(--pen-tip-offset));
+    transform: translateY(-50%) rotate(-8deg);
+  }
+
+  .laugh-emoji,
+  .heart-beat,
+  .romcom-emoji,
+  .tragedy-emoji,
+  .observational-emoji {
+    animation: none;
+  }
 }
 
 .section { margin-top: 34px; }
@@ -423,6 +561,11 @@ h3 { font-size: 1.5rem; }
 
 .genre-tile h3 {
   font-size: 1.3rem;
+}
+
+.genre-tile .project-type {
+  font-size: 0.86rem;
+  letter-spacing: 0.16em;
 }
 
 .genre-tile a {
