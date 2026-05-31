@@ -121,6 +121,17 @@ a { color: inherit; }
   color: var(--muted);
 }
 
+.section-label,
+.project-type {
+  font-weight: 700;
+  font-style: italic;
+}
+
+.skills-label {
+  font-weight: 700;
+  font-style: italic;
+}
+
 h1, h2, h3 {
   font-family: Georgia, "Times New Roman", serif;
   font-weight: 700;
@@ -383,6 +394,11 @@ h3 { font-size: 1.5rem; }
 
 .skill-group + .skill-group { margin-top: 18px; padding-top: 18px; border-top: 1px solid var(--line); }
 .contact-card { display: grid; align-content: start; }
+
+.contact-card h2 {
+  font-weight: 700;
+  font-style: italic;
+}
 
 @media (max-width: 900px) {
   .topbar-inner { padding: 16px 18px; }

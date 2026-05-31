@@ -282,7 +282,7 @@ export default function App() {
 
         <section className="section grid-2" id="contact">
           <article className="card skills-card" id="skills">
-            <p className="section-label">Skills</p>
+            <p className="section-label skills-label">Skills</p>
             <div className="skill-group">
               <h3>Soft Skills</h3>
               <p>Excellent Speaker, Skilled Orator</p>
