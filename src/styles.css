@@ -567,6 +567,7 @@ h3 { font-size: 1.5rem; }
 
 .genre-grid-compact {
   grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
 }
 
 .genre-tile {
@@ -663,6 +664,37 @@ h3 { font-size: 1.5rem; }
   align-content: start;
 }
 
+.poetry-card {
+  align-content: start;
+}
+
+.poetry-head {
+  display: grid;
+  grid-template-columns: 1fr minmax(340px, 64%);
+  align-items: center;
+  gap: 18px;
+}
+
+.poetry-copy {
+  display: grid;
+  align-content: start;
+  gap: 14px;
+}
+
+.poetry-copy a {
+  margin-top: 20px;
+}
+
+.poetry-copy h3 {
+  margin-top: 0;
+}
+
+.poetry-media {
+  display: grid;
+  align-content: start;
+  gap: 0;
+}
+
 .sitcom-head {
   display: grid;
   grid-template-columns: 1fr minmax(340px, 64%);
@@ -672,11 +704,22 @@ h3 { font-size: 1.5rem; }
 
 .sitcom-copy {
   display: grid;
-  gap: 6px;
+  align-content: start;
+  gap: 14px;
+}
+
+.sitcom-copy a {
+  margin-top: 20px;
 }
 
 .sitcom-copy h3 {
   margin-top: 0;
+}
+
+.sitcom-media {
+  display: grid;
+  align-content: start;
+  gap: 0;
 }
 
 .genre-cover-image {
@@ -690,7 +733,11 @@ h3 { font-size: 1.5rem; }
 }
 
 .sitcom-card a {
-  margin-top: 12px;
+  margin-top: 0;
+}
+
+.poetry-card a {
+  margin-top: 0;
 }
 
 .skill-group + .skill-group { margin-top: 18px; padding-top: 18px; border-top: 1px solid var(--line); }
@@ -748,7 +795,9 @@ h3 { font-size: 1.5rem; }
   .genre-grid-compact { grid-template-columns: 1fr; }
   .hero { min-height: auto; padding-top: 12px; }
   .section-heading { align-items: start; flex-direction: column; }
+  .poetry-head { grid-template-columns: 1fr; }
   .sitcom-head { grid-template-columns: 1fr; }
+  .sitcom-media { gap: 10px; }
   .genre-cover-image { width: 100%; height: clamp(150px, 34vw, 210px); }
 }
 

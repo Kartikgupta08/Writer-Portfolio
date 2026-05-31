@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import profileImage from '../assets/profile.png';
 import neighboursImage from '../assets/Neighbours.png';
+import fakePoetryImage from '../assets/fakepoetry.png';
 
 const mediumProfile = 'https://medium.com/@kaartikgupta2';
 const linkedinProfile = 'https://www.linkedin.com/in/kartik-gupta08/';
@@ -313,10 +314,22 @@ export default function App() {
           </div>
 
           <div className="genre-grid genre-grid-compact">
-            <article className="card genre-tile">
-              <p className="project-type">Funny Poetry</p>
-              <h3>Fake poetries</h3>
-              <a href="https://medium.com/@kaartikgupta2/list/fake-poetries-fa97c0bf36a3" target="_blank" rel="noreferrer">Let's laugh</a>
+            <article className="card genre-tile poetry-card">
+              <div className="poetry-head">
+                <div className="poetry-copy">
+                  <p className="project-type">Funny Poetry</p>
+                  <h3>Fake poetries</h3>
+                  <a href="https://medium.com/@kaartikgupta2/list/fake-poetries-fa97c0bf36a3" target="_blank" rel="noreferrer">Let's laugh</a>
+                </div>
+                <div className="poetry-media">
+                  <img
+                    className="genre-cover-image"
+                    src={fakePoetryImage}
+                    alt="Cover image for fake poetries"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
             </article>
 
             <article className="card genre-tile sitcom-card">
@@ -324,15 +337,17 @@ export default function App() {
                 <div className="sitcom-copy">
                   <p className="project-type">Sit-Com Story</p>
                   <h3>Neighbours</h3>
+                  <a href="https://medium.com/@kaartikgupta2/list/neighbours-7a19c2e2703b" target="_blank" rel="noreferrer">Explore Work</a>
                 </div>
-                <img
-                  className="genre-cover-image"
-                  src={neighboursImage}
-                  alt="Cover image for Neighbours sit-com story"
-                  loading="lazy"
-                />
+                <div className="sitcom-media">
+                  <img
+                    className="genre-cover-image"
+                    src={neighboursImage}
+                    alt="Cover image for Neighbours sit-com story"
+                    loading="lazy"
+                  />
+                </div>
               </div>
-              <a href="https://medium.com/@kaartikgupta2/list/neighbours-7a19c2e2703b" target="_blank" rel="noreferrer">Explore Work</a>
             </article>
           </div>
         </section>
