@@ -191,7 +191,7 @@ h3 { font-size: 1.5rem; }
   margin-top: 0;
 }
 
-.button, .resume-button, .contact-links a, .project-card a, .genre-tile a {
+.button, .contact-links a, .project-card a, .genre-tile a {
   display: inline-flex;
   align-items: center;
   gap: 10px;
@@ -209,7 +209,6 @@ h3 { font-size: 1.5rem; }
 
 .button-dark,
 .button-light,
-.resume-button,
 .contact-links a,
 .project-card a,
 .genre-tile a {
