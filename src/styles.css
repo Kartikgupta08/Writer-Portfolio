@@ -780,10 +780,24 @@ h3 { font-size: 1.5rem; }
 
 .sitcom-card {
   align-content: start;
+  background: #ded1f5;
+  border-color: rgba(93, 58, 152, 0.56);
 }
 
 .poetry-card {
   align-content: start;
+  background: #f08b94;
+  border-color: rgba(126, 30, 44, 0.62);
+}
+
+.sitcom-card h3,
+.sitcom-card .project-type {
+  color: #2c1d47;
+}
+
+.poetry-card h3,
+.poetry-card .project-type {
+  color: #3d1c27;
 }
 
 .poetry-head {
@@ -852,10 +866,52 @@ h3 { font-size: 1.5rem; }
 
 .sitcom-card a {
   margin-top: 0;
+  background: #fff;
+  color: #111;
+  border-color: #000;
 }
 
 .poetry-card a {
   margin-top: 0;
+  background: #fff;
+  color: #111;
+  border-color: #000;
+}
+
+.sitcom-card a:hover,
+.poetry-card a:hover {
+  background: #000;
+  color: #fff;
+  border-color: #000;
+}
+
+.sitcom-card a:focus-visible,
+.poetry-card a:focus-visible,
+.sitcom-card a:active,
+.poetry-card a:active {
+  background: #000;
+  color: #fff;
+  border-color: #000;
+}
+
+:root[data-theme='dark'] .sitcom-card a,
+:root[data-theme='dark'] .poetry-card a,
+:root[data-theme='dark'] .sitcom-card a:hover,
+:root[data-theme='dark'] .poetry-card a:hover {
+  background: #1a1f28;
+  color: #f1f3f6;
+  border-color: rgba(255, 255, 255, 0.24);
+}
+
+:root[data-theme='dark'] .sitcom-card a:hover,
+:root[data-theme='dark'] .poetry-card a:hover,
+:root[data-theme='dark'] .sitcom-card a:focus-visible,
+:root[data-theme='dark'] .poetry-card a:focus-visible,
+:root[data-theme='dark'] .sitcom-card a:active,
+:root[data-theme='dark'] .poetry-card a:active {
+  background: #12a8e0;
+  color: #fff;
+  border-color: #12a8e0;
 }
 
 .skill-group + .skill-group { margin-top: 18px; padding-top: 18px; border-top: 1px solid var(--line); }
