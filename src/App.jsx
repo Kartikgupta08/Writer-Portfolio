@@ -419,6 +419,7 @@ export default function App() {
           <article className="card contact-card">
             <p className="section-label">Contact</p>
             <h2>Let the words do the talking.</h2>
+            <p className="contact-opportunity">I'm currently looking for new opportunities.</p>
             <p>
               Reach out for writing roles, collaborations, narration work, content strategy, or portfolio review.
             </p>
