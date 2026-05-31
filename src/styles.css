@@ -908,6 +908,10 @@ h3 { font-size: 1.5rem; }
   background: rgba(0, 0, 0, 0.26);
 }
 
+:root[data-theme='dark'] .site-footer::before {
+  background: rgba(180, 188, 198, 0.38);
+}
+
 @media (max-width: 900px) {
   .topbar-inner { padding: 16px 18px; }
   .hero, .grid-2, .projects-grid { grid-template-columns: 1fr; }
