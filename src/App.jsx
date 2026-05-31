@@ -240,7 +240,7 @@ export default function App() {
               <a href="https://medium.com/@kaartikgupta2/list/romance-9a2df8f4b96a" target="_blank" rel="noreferrer">Explore Work</a>
             </article>
 
-            <article className="card genre-tile">
+            <article className="card genre-tile comedy-card">
               <p className="project-type comedy-label">
                 <span className="laugh-emoji" aria-hidden="true">😂</span>
                 Comedy
@@ -249,7 +249,7 @@ export default function App() {
               <a href="https://medium.com/@kaartikgupta2/list/funny-480509cec0ca" target="_blank" rel="noreferrer">Explore Work</a>
             </article>
 
-            <article className="card genre-tile">
+            <article className="card genre-tile romcom-card">
               <p className="project-type romcom-label">
                 <span className="romcom-emoji" aria-hidden="true">🎬</span>
                 Rom-Com
@@ -258,7 +258,7 @@ export default function App() {
               <a href="https://medium.com/@kaartikgupta2/list/romcom-5dba0c67c92c" target="_blank" rel="noreferrer">Explore Work</a>
             </article>
 
-            <article className="card genre-tile">
+            <article className="card genre-tile tragedy-card">
               <p className="project-type tragedy-label">
                 <span className="tragedy-emoji" aria-hidden="true">💔</span>
                 Tragedy
@@ -267,7 +267,7 @@ export default function App() {
               <a href="https://medium.com/@kaartikgupta2/list/rr-rotadu-ritesiykyk-f70202bfb841" target="_blank" rel="noreferrer">Explore Work</a>
             </article>
 
-            <article className="card genre-tile">
+            <article className="card genre-tile observational-card">
               <p className="project-type observational-label">
                 <span className="observational-emoji" aria-hidden="true">👀</span>
                 Observational

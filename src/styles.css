@@ -561,7 +561,7 @@ h3 { font-size: 1.5rem; }
 
 .romance-card {
   background: #ffdfe9;
-  border-color: rgba(210, 120, 150, 0.35);
+  border-color: rgba(170, 82, 115, 0.62);
 }
 
 .romance-card h3,
@@ -572,6 +572,50 @@ h3 { font-size: 1.5rem; }
 
 .romance-card .heart-inline {
   color: #ff4f7a;
+}
+
+.comedy-card {
+  background: #fff3bf;
+  border-color: rgba(148, 112, 10, 0.62);
+}
+
+.comedy-card h3,
+.comedy-card .project-type,
+.comedy-card p {
+  color: #2a2208;
+}
+
+.romcom-card {
+  background: #dfeeff;
+  border-color: rgba(45, 90, 160, 0.62);
+}
+
+.romcom-card h3,
+.romcom-card .project-type,
+.romcom-card p {
+  color: #16253a;
+}
+
+.tragedy-card {
+  background: linear-gradient(160deg, #e7e7e7 0%, #d3d3d3 48%, #bcbcbc 100%);
+  border-color: rgba(35, 35, 35, 0.62);
+}
+
+.tragedy-card h3,
+.tragedy-card .project-type,
+.tragedy-card p {
+  color: #1a1a1a;
+}
+
+.observational-card {
+  background: #c8f2d6;
+  border-color: rgba(24, 102, 61, 0.62);
+}
+
+.observational-card h3,
+.observational-card .project-type,
+.observational-card p {
+  color: #123222;
 }
 
 .genre-tile h3 {
