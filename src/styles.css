@@ -739,6 +739,16 @@ h3 { font-size: 1.5rem; }
   color: rgba(255, 255, 255, 0.9);
 }
 
+:root[data-theme='dark'] .topnav a:active,
+:root[data-theme='dark'] .topnav a:focus {
+  color: #12a8e0;
+}
+
+:root[data-theme='dark'] .topnav a:active::after,
+:root[data-theme='dark'] .topnav a:focus::after {
+  transform: scaleX(1);
+}
+
 :root[data-theme='dark'] .button,
 :root[data-theme='dark'] .contact-links a,
 :root[data-theme='dark'] .project-card a,
