@@ -79,6 +79,11 @@ a { color: inherit; }
   gap: 10px;
 }
 
+.top-actions .mode-button,
+.top-actions .resume-button {
+  width: 164px;
+}
+
 .topnav {
   display: flex;
   flex-wrap: wrap;
