@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import profileImage from '../assets/profile.png';
+import neighboursImage from '../assets/Neighbours.png';
 
 const mediumProfile = 'https://medium.com/@kaartikgupta2';
 const linkedinProfile = 'https://www.linkedin.com/in/kartik-gupta08/';
@@ -318,9 +319,19 @@ export default function App() {
               <a href="https://medium.com/@kaartikgupta2/list/fake-poetries-fa97c0bf36a3" target="_blank" rel="noreferrer">Let's laugh</a>
             </article>
 
-            <article className="card genre-tile">
-              <p className="project-type">Sit-Com Story</p>
-              <h3>Neighbours</h3>
+            <article className="card genre-tile sitcom-card">
+              <div className="sitcom-head">
+                <div className="sitcom-copy">
+                  <p className="project-type">Sit-Com Story</p>
+                  <h3>Neighbours</h3>
+                </div>
+                <img
+                  className="genre-cover-image"
+                  src={neighboursImage}
+                  alt="Cover image for Neighbours sit-com story"
+                  loading="lazy"
+                />
+              </div>
               <a href="https://medium.com/@kaartikgupta2/list/neighbours-7a19c2e2703b" target="_blank" rel="noreferrer">Explore Work</a>
             </article>
           </div>
