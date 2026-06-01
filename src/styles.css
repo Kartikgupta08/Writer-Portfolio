@@ -223,7 +223,7 @@ h3 { font-size: 1.5rem; }
   background: linear-gradient(90deg, #0a0a0a 0%, rgba(10, 10, 10, 0.35) 100%);
   transform: translateY(-50%) scaleX(0);
   transform-origin: left;
-  animation: draw-name-line 1.4s ease-out 0.12s forwards;
+  animation: draw-name-line 2.4s ease-out 0.12s forwards;
 }
 
 :root[data-theme='dark'] .name-underline {
@@ -240,7 +240,7 @@ h3 { font-size: 1.5rem; }
   opacity: 0.9;
   transform: translateY(-50%) rotate(-8deg);
   transform-origin: center;
-  animation: move-pen 1.4s ease-out 0.12s forwards;
+  animation: move-pen 2.4s ease-out 0.12s forwards;
 }
 
 :root[data-theme='dark'] .pen-mark {
@@ -814,6 +814,16 @@ h3 { font-size: 1.5rem; }
 
 :root[data-theme='dark'] .topnav a {
   color: rgba(255, 255, 255, 0.9);
+}
+
+:root[data-theme='dark'] .topnav a:hover,
+:root[data-theme='dark'] .topnav a:focus-visible {
+  color: #12a8e0;
+}
+
+:root[data-theme='dark'] .topnav a:hover::after,
+:root[data-theme='dark'] .topnav a:focus-visible::after {
+  transform: scaleX(1);
 }
 
 :root[data-theme='dark'] .topnav a:active,
