@@ -557,6 +557,14 @@ h3 { font-size: 1.5rem; }
 .grid-2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
 .section-heading { display: flex; justify-content: space-between; align-items: end; gap: 16px; margin-bottom: 16px; }
 
+#about,
+#skills,
+#projects,
+#experience,
+#contact {
+  scroll-margin-top: 112px;
+}
+
 .card {
   background: var(--panel);
   backdrop-filter: blur(14px);
@@ -1110,4 +1118,12 @@ h3 { font-size: 1.5rem; }
     height: 56px;
   }
   .back-to-top svg { width: 24px; height: 24px; }
+
+  #about,
+  #skills,
+  #projects,
+  #experience,
+  #contact {
+    scroll-margin-top: 170px;
+  }
 }
