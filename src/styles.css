@@ -680,6 +680,14 @@ h3 { font-size: 1.5rem; }
 .projects-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
 .project-card { display: grid; gap: 10px; }
 
+.project-card p:not(.project-type) {
+  margin: 0;
+}
+
+.project-card p:not(.project-type) + p:not(.project-type) {
+  margin-top: 8px;
+}
+
 .projects-grid .project-card {
   transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
 }
