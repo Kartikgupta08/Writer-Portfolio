@@ -77,10 +77,6 @@ npm run preview
 - Replace images in `assets/` and update imports in `src/App.jsx`
 - Replace resume file in `public/Writer_resume.pdf`
 
-## Deployment
-
-You can deploy this Vite app to any static hosting platform (Vercel, Netlify, GitHub Pages, etc.) using the production output from `npm run build`.
-
 ## Author
 
 **Kartik Gupta**
